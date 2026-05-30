@@ -1,0 +1,7 @@
+{
+  "name": "Kirdaar Celebrations",
+  "description": "India's Premium Wedding Ethnic Destination. Discover luxury Sarees, Lehengas, and Gowns with personalized styling for every celebration.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

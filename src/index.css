@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-primary: #800000;
+  /* Maroon */
+  --color-primary-light: #A52A2A;
+  --color-secondary: #D4AF37;
+  /* Gold */
+  --color-accent-pink: #E30B5D;
+  /* Rani Pink */
+  --color-accent-green: #006400;
+  /* Deep Green */
+  --color-accent-blue: #002366;
+  /* Royal Blue */
+  --color-beige: #F5F5DC;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-background text-foreground antialiased;
+    /* REMOVED: transition: background-color — caused repaint overhead */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-tight;
+  }
+
+  /* CRITICAL FIX: Removed global `* { transition-colors }` — was causing
+     repaint storms across thousands of DOM elements during every scroll tick.
+     Transitions are now applied only on specific elements that need them. */
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    /* scroll-smooth removed — conflicts with Framer Motion scroll tracking */
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+}
+
+@utility royal-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@layer utilities {
+  .global-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+  }
+
+  .section-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .inner-spacing-sm {
+    gap: 12px;
+  }
+
+  .inner-spacing-md {
+    gap: 20px;
+  }
+
+  .gold-border {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to bottom right, #D4AF37, #800000, #D4AF37) 1;
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 4px 20px rgba(128, 0, 0, 0.03);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .serif-heading {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  /* === PERFORMANCE UTILITIES === */
+
+  /* Use on sections below the fold to skip painting until near viewport */
+  .perf-section {
+    contain: paint layout;
+  }
+
+  /* Safe GPU promotion - only for elements that truly need compositing */
+  .gpu-layer {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* silk-texture used by Hero - keep as background color only, no filter */
+  .silk-texture {
+    background-color: #1a1a1a;
+  }
+
+  /* luxury-button - replaces transition-all with specific properties */
+  .luxury-button {
+    transition: background-color 200ms ease, color 200ms ease, opacity 200ms ease;
+  }
+
+  /* Targeted transition helpers - used INSTEAD of global transition-colors */
+  .transition-colors-fast {
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+  }
+
+  .transition-transform-fast {
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+  }
+}
+
+/* CRITICAL FIX: royal-pattern REMOVED from body.
+   Applying an SVG background to <body> (the scroll container) caused the
+   ENTIRE viewport to repaint on every scroll tick — the single biggest
+   repaint area in the app. The pattern is now applied only to a fixed
+   pseudo-element on a non-scroll element so it never repaints during scroll.
+   Visual result is identical. */
+@layer base {
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--background);
+    will-change: auto;
+  }
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Geist Variable', sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #FCF8F1;
+  /* Warm Ivory/Cream for a royal feel */
+  --foreground: #2D0000;
+  /* Deep maroon text */
+  --card: #FFFFFF;
+  --card-foreground: #2D0000;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D0000;
+  --primary: #800000;
+  /* Royal Maroon */
+  --primary-foreground: #FFFFFF;
+  --secondary: #B8860B;
+  /* Antique Gold */
+  --secondary-foreground: #2D0000;
+  --muted: #F5E6D3;
+  --muted-foreground: #6B4F4F;
+  --accent: #C2185B;
+  /* Deep Rani Pink */
+  --accent-foreground: #FFFFFF;
+  --destructive: #D32F2F;
+  --border: #E5D5D5;
+  --input: #E5D5D5;
+  --ring: #800000;
+  --radius: 0rem;
+  /* Sharp edges for a more high-fashion/luxury look */
+}
+
+.dark {
+  --background: #1A0505;
+  /* Deepest black-maroon */
+  --foreground: #FCF8F1;
+  --card: #2D0000;
+  --card-foreground: #FCF8F1;
+  --popover: #2D0000;
+  --popover-foreground: #FCF8F1;
+  --primary: #D4AF37;
+  /* Bright Gold in dark mode */
+  --primary-foreground: #1A0505;
+  --secondary: #800000;
+  --secondary-foreground: #FCF8F1;
+  --muted: #3D1A1A;
+  --muted-foreground: #A58E8E;
+  --accent: #FF4081;
+  --accent-foreground: #FFFFFF;
+  --border: #3D1A1A;
+  --input: #3D1A1A;
+  --ring: #D4AF37;
+}
