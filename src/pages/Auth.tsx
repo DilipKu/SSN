@@ -383,7 +383,7 @@ export const Auth = () => {
                         required
                         value={signupForm.name}
                         onChange={(e) => setSignupForm(prev => ({ ...prev, name: e.target.value }))}
-                        placeholder="E.g. Rajesh Prasanna"
+                        placeholder="E.g. Rahul Sharma"
                         className="w-full bg-secondary-cream/30 border border-secondary-sand rounded-xl px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-colors"
                       />
                     </div>
@@ -396,7 +396,7 @@ export const Auth = () => {
                           required
                           value={signupForm.email}
                           onChange={(e) => setSignupForm(prev => ({ ...prev, email: e.target.value }))}
-                          placeholder="rajesh@example.com"
+                          placeholder="rahul@example.com"
                           className="w-full bg-secondary-cream/30 border border-secondary-sand rounded-xl px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-colors"
                         />
                       </div>

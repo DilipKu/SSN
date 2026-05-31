@@ -1,58 +1,8 @@
 import { ChevronRight, Sparkles } from "lucide-react";
 import { Heading, Text } from "../ui/Typography";
+import { CATEGORIES } from "../../data";
 
 export const CategoryShowcase = () => {
-  const categories = [
-    {
-      name: "Kaju Collection",
-      img: "https://images.pexels.com/photos/18488310/pexels-photo-18488310.jpeg",
-      count: "12 Items",
-      path: "/category/kaju-collection",
-    },
-    {
-      name: "Laddu Collection",
-      img: "https://images.pexels.com/photos/19151502/pexels-photo-19151502.jpeg",
-      count: "18 Items",
-      path: "/category/laddu-collection",
-    },
-    {
-      name: "Bengali Sweets",
-      img: "https://images.pexels.com/photos/15014918/pexels-photo-15014918.jpeg",
-      count: "10 Items",
-      path: "/category/bengali-sweets",
-    },
-    {
-      name: "Sugar Free",
-      img: "https://images.pexels.com/photos/37124553/pexels-photo-37124553.jpeg",
-      count: "8 Items",
-      path: "/category/sugar-free",
-    },
-    {
-      name: "Namkeen",
-      img: "https://images.pexels.com/photos/31617910/pexels-photo-31617910.jpeg",
-      count: "24 Items",
-      path: "/category/namkeen",
-    },
-    {
-      name: "Dry Fruits",
-      img: "https://images.pexels.com/photos/2386158/pexels-photo-2386158.jpeg",
-      count: "15 Items",
-      path: "/category/dry-fruits",
-    },
-    {
-      name: "Festival Hampers",
-      img: "https://images.pexels.com/photos/20699855/pexels-photo-20699855.jpeg",
-      count: "6 Hampers",
-      path: "/category/festive",
-    },
-    {
-      name: "Corporate Gifting",
-      img: "https://images.pexels.com/photos/36235852/pexels-photo-36235852.jpeg",
-      count: "Custom B2B",
-      path: "/category/festive",
-    },
-  ];
-
   return (
     <section className="py-24 container mx-auto px-4 md:px-8">
       <div className="text-center max-w-2xl mx-auto mb-16">
@@ -72,7 +22,7 @@ export const CategoryShowcase = () => {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        {categories.map((cat, i) => (
+        {CATEGORIES.map((cat, i) => (
           <a
             key={i}
             href={cat.path}

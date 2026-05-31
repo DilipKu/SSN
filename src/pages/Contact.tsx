@@ -252,7 +252,7 @@ export const Contact = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="E.g. Rajesh Kumar"
+                          placeholder="E.g. Rahul Kumar"
                           className="w-full bg-secondary-cream/30 border border-secondary-sand rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-colors"
                         />
                       </div>
@@ -264,7 +264,7 @@ export const Contact = () => {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="E.g. rajesh@email.com"
+                          placeholder="E.g. rahul@email.com"
                           className="w-full bg-secondary-cream/30 border border-secondary-sand rounded-xl px-4 py-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-colors"
                         />
                       </div>

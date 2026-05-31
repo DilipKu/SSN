@@ -4,6 +4,7 @@ import { Search, ShoppingBag, User, Heart, Menu, X, ChevronDown, Gift, Award, Sp
 import { Button } from '../ui/Button';
 import logo from '../../assets/ssn_logo.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NAV_CATEGORIES } from '../../data';
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,22 +33,7 @@ export const Navbar = () => {
   const totalCartItemsCount = cartItems.reduce((acc, item) => acc + item.qty, 0);
   const cartSubtotal = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  const categories = {
-    sweets: [
-      { name: 'Kaju Collection', path: '/category/kaju-collection', desc: 'Creamy premium cashew delicacies', img: 'https://images.pexels.com/photos/18488310/pexels-photo-18488310.jpeg' },
-      { name: 'Laddu Collection', path: '/category/laddu-collection', desc: 'Golden spheres of pure desi ghee', img: 'https://images.pexels.com/photos/19151502/pexels-photo-19151502.jpeg' },
-      { name: 'Bengali Sweets', path: '/category/bengali-sweets', desc: 'Soft rasgullas and syrupy sandesh', img: 'https://images.pexels.com/photos/15014918/pexels-photo-15014918.jpeg' },
-      { name: 'Sugar Free', path: '/category/sugar-free', desc: 'Guilt-free traditional delights', img: 'https://images.pexels.com/photos/37124553/pexels-photo-37124553.jpeg' },
-    ],
-    namkeen: [
-      { name: 'Premium Mixtures', path: '/category/namkeen', desc: 'Spicy and crunchy mixtures', img: 'https://images.pexels.com/photos/31617910/pexels-photo-31617910.jpeg' },
-      { name: 'Traditional Savories', path: '/category/namkeen', desc: 'Bhujia, sev, and classic snacks', img: 'https://images.pexels.com/photos/31617910/pexels-photo-31617910.jpeg' },
-    ],
-    gifting: [
-      { name: 'Festival Hampers', path: '/category/festive', desc: 'Curated royal gift hampers', img: 'https://images.pexels.com/photos/20699855/pexels-photo-20699855.jpeg' },
-      { name: 'Corporate Gifting', path: '/category/festive', desc: 'Premium customized B2B sets', img: 'https://images.pexels.com/photos/36235852/pexels-photo-36235852.jpeg' },
-    ]
-  };
+  const categories = NAV_CATEGORIES;
 
   return (
     <div className="w-full z-50 sticky top-0">
@@ -86,16 +72,8 @@ export const Navbar = () => {
 
             {/* Logo */}
             <div className="flex-1 flex justify-center lg:justify-start">
-              <Link to="/" className="flex items-center gap-3">
-                <img src={logo} alt="SSN Sudarshan Sweets" className="h-14 w-auto object-contain rounded-md mix-blend-multiply" />
-                <div className="hidden xl:flex flex-col text-left">
-                  <span className="font-playfair text-base font-bold tracking-widest text-primary uppercase leading-none">
-                    Sudarshan
-                  </span>
-                  <span className="font-inter text-[9px] font-semibold tracking-[0.25em] text-text-brown/70 uppercase mt-0.5">
-                    Sweets & Namkeen
-                  </span>
-                </div>
+              <Link to="/" className="flex items-center">
+                <img src={logo} alt="SSN Sudarshan Sweets" className="h-20 md:h-24 w-auto object-contain rounded-md mix-blend-multiply" />
               </Link>
             </div>
 
@@ -286,7 +264,7 @@ export const Navbar = () => {
               <div>
                 <div className="flex items-center justify-between mb-8">
                   <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                    <img src={logo} alt="SSN Logo" className="h-12 w-auto mix-blend-multiply" />
+                    <img src={logo} alt="SSN Logo" className="h-16 md:h-20 w-auto mix-blend-multiply" />
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-6 w-6" />
