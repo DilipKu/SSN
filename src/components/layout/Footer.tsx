@@ -94,7 +94,7 @@ export const Footer = () => {
               <li><Link to="/category/festive" className="hover:text-primary-gold hover:translate-x-1 inline-block transition-transform duration-300">Royal Gift Hampers</Link></li>
               <li><Link to="/about" className="hover:text-primary-gold hover:translate-x-1 inline-block transition-transform duration-300">Our Heritage Story</Link></li>
               <li><Link to="/contact" className="hover:text-primary-gold hover:translate-x-1 inline-block transition-transform duration-300">Contact Concierge</Link></li>
-              <li><Link to="/category/namkeen" className="hover:text-primary-gold hover:translate-x-1 inline-block transition-transform duration-300">Spicy Namkeen</Link></li>
+              <li><Link to="/orders" className="hover:text-primary-gold hover:translate-x-1 inline-block transition-transform duration-300">Track My Orders</Link></li>
             </ul>
           </div>
 
