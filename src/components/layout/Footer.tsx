@@ -105,22 +105,8 @@ export const Footer = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary-gold shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-secondary-cream">Connaught Place Flagship</p>
-                  <p className="opacity-80">Block E, Inner Circle, New Delhi, 110001</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-primary-gold shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-secondary-cream">Galleria Market Store</p>
-                  <p className="opacity-80">First Floor, Sector 28, Gurugram, 122002</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-primary-gold shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-secondary-cream">Sector 18 Flagship</p>
-                  <p className="opacity-80">Pocket K, Sector 18 Market, Noida, 201301</p>
+                  <p className="font-bold text-secondary-cream">Gandhi Nagar Flagship</p>
+                  <p className="opacity-80">X/938 satsang marg, new chand mohalla, Gandhi nagar</p>
                 </div>
               </li>
             </ul>
@@ -133,7 +119,7 @@ export const Footer = () => {
               <ul className="space-y-2.5 font-inter text-sm text-secondary-cream/70">
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-primary-gold" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 8800308268</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-primary-gold" />

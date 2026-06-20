@@ -238,9 +238,9 @@ export const ProductDetails = () => {
                 >+</button>
               </div>
               
-              <Button size="lg" className="flex-1 h-12 text-base font-bold bg-primary hover:bg-primary-gold hover:text-primary text-secondary-cream border-none shadow-xl shadow-primary/25 flex items-center justify-center gap-2">
+              {/* <Button size="lg" className="flex-1 h-12 text-base font-bold bg-primary hover:bg-primary-gold hover:text-primary text-secondary-cream border-none shadow-xl shadow-primary/25 flex items-center justify-center gap-2">
                 <ShoppingBag className="w-5 h-5" /> Add to Royal Cart
-              </Button>
+              </Button> */}
               
               <Button 
                 size="icon" 
@@ -360,9 +360,9 @@ export const ProductDetails = () => {
                     <span>Combo Price:</span>
                     <span className="font-extrabold text-lg text-primary">₹{calculateComboTotal()}</span>
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary-gold hover:text-primary text-white font-bold text-xs uppercase py-2.5 rounded-xl border-none shadow-md">
+                  {/* <Button className="w-full bg-primary hover:bg-primary-gold hover:text-primary text-white font-bold text-xs uppercase py-2.5 rounded-xl border-none shadow-md">
                     Add Selected Combo
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -586,13 +586,13 @@ export const ProductDetails = () => {
           <span className="text-xs font-bold text-text-brown truncate max-w-[160px] font-playfair">{MOCK_PRODUCT.name}</span>
           <span className="text-sm font-black text-primary font-inter">₹{MOCK_PRODUCT.price}</span>
         </div>
-        <button 
+        {/* <button 
           onClick={() => alert(`Added ${MOCK_PRODUCT.name} to cart!`)}
           className="h-10 px-5 bg-primary hover:bg-primary-gold hover:text-primary text-secondary-cream font-bold text-xs rounded-xl shadow-md flex items-center gap-1.5 transition-all duration-300 border border-primary/20 cursor-pointer"
         >
           <ShoppingBag className="w-3.5 h-3.5" />
           <span>Add to Cart</span>
-        </button>
+        </button> */}
       </div>
 
       <Footer />

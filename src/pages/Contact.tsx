@@ -31,17 +31,17 @@ export const Contact = () => {
     {
       title: 'Phone Support',
       desc: 'Speak directly with our concierge team for custom suggestions.',
-      info: '+91 98765 43210',
+      info: '+91 8800308268',
       actionText: 'Call Now',
-      href: 'tel:+919876543210',
+      href: 'tel:+918800308268',
       icon: <Phone className="w-5 h-5 text-primary-gold" />
     },
     {
       title: 'WhatsApp Concierge',
       desc: 'Quick chat for orders, tracking, and fast query resolutions.',
-      info: '+91 98765 43211',
+      info: '+91 8800308268',
       actionText: 'Chat on WhatsApp',
-      href: 'https://wa.me/919876543211',
+      href: 'https://wa.me/918800308268',
       icon: <MessageSquare className="w-5 h-5 text-primary-gold" />
     },
     {
@@ -55,7 +55,7 @@ export const Contact = () => {
     {
       title: 'Corporate Flagship',
       desc: 'Visit our flagship sweet kitchen and executive offices.',
-      info: 'Connaught Place, New Delhi',
+      info: 'X/938 satsang marg, new chand mohalla, Gandhi nagar',
       actionText: 'Get Directions',
       href: 'https://maps.google.com',
       icon: <MapPin className="w-5 h-5 text-primary-gold" />
@@ -91,24 +91,10 @@ export const Contact = () => {
 
   const stores = [
     {
-      name: 'Connaught Place Flagship',
-      address: 'Block E, Inner Circle, Connaught Place, New Delhi, 110001',
-      phone: '+91 98765 43210',
+      name: 'Gandhi Nagar Flagship',
+      address: 'X/938 satsang marg, new chand mohalla, Gandhi nagar',
+      phone: '+91 8800308268',
       hours: '9:00 AM – 10:00 PM (Daily)',
-      mapLink: 'https://maps.google.com'
-    },
-    {
-      name: 'Galleria Market Store',
-      address: 'First Floor, Sector 28, Galleria Market, Gurugram, 122002',
-      phone: '+91 98765 43215',
-      hours: '10:00 AM – 9:30 PM (Daily)',
-      mapLink: 'https://maps.google.com'
-    },
-    {
-      name: 'Sector 18 Flagship',
-      address: 'Pocket K, Sector 18 Market, Noida, 201301',
-      phone: '+91 98765 43218',
-      hours: '9:30 AM – 10:00 PM (Daily)',
       mapLink: 'https://maps.google.com'
     }
   ];
@@ -178,7 +164,7 @@ export const Contact = () => {
                   </div>
                   <h4 className="font-playfair font-bold text-lg text-text-brown">{card.title}</h4>
                   <p className="text-xs text-text-brown/60 font-inter leading-relaxed">{card.desc}</p>
-                  <p className="text-sm font-bold text-primary font-inter">{card.info}</p>
+                  <p className="text-sm font-bold text-primary font-inter break-all">{card.info}</p>
                 </div>
                 <div className="pt-6">
                   <a href={card.href} target="_blank" rel="noopener noreferrer">
@@ -349,44 +335,18 @@ export const Contact = () => {
             <div className="w-12 h-[1.5px] bg-primary-gold mx-auto mt-4"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group overflow-hidden rounded-2xl border border-secondary-sand/30 shadow-md bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+            <div className="group overflow-hidden rounded-2xl border border-secondary-sand/30 shadow-md bg-white md:col-start-2">
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src="https://images.pexels.com/photos/15014918/pexels-photo-15014918.jpeg" 
-                  alt="Connaught Place Sweet Boutique" 
+                  alt="Gandhi Nagar Sweet Boutique" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
               </div>
               <div className="p-6 text-left space-y-2">
-                <h4 className="font-playfair font-bold text-xl text-text-brown">Connaught Place Flagship</h4>
+                <h4 className="font-playfair font-bold text-xl text-text-brown">Gandhi Nagar Flagship</h4>
                 <p className="text-xs text-text-brown/60 font-inter">Beautiful vintage store offering live counter sampling and direct gift packaging options.</p>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-2xl border border-secondary-sand/30 shadow-md bg-white">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://images.pexels.com/photos/31617910/pexels-photo-31617910.jpeg" 
-                  alt="Galleria Market Boutique" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-              </div>
-              <div className="p-6 text-left space-y-2">
-                <h4 className="font-playfair font-bold text-xl text-text-brown">Galleria Market Gurugram</h4>
-                <p className="text-xs text-text-brown/60 font-inter">State-of-the-art boutique housing premium sugar-free sections and our corporate design catalog table.</p>
-              </div>
-            </div>
-            <div className="group overflow-hidden rounded-2xl border border-secondary-sand/30 shadow-md bg-white">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://images.pexels.com/photos/20699855/pexels-photo-20699855.jpeg" 
-                  alt="Sector 18 Noida Boutique" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-              </div>
-              <div className="p-6 text-left space-y-2">
-                <h4 className="font-playfair font-bold text-xl text-text-brown">Sector 18 Noida Outlet</h4>
-                <p className="text-xs text-text-brown/60 font-inter">Convenient store located right in Noida, featuring live baking, warm namkeens, and festive collection ranges.</p>
               </div>
             </div>
           </div>
@@ -430,25 +390,13 @@ export const Contact = () => {
 
               {/* Map Simulator Column */}
               <div className="lg:col-span-7 h-[450px] lg:h-[600px] w-full rounded-3xl overflow-hidden border border-secondary-sand/65 shadow-2xl relative">
-                {/* Simulated luxury dark map */}
-                <div className="absolute inset-0 bg-[#E8DCCB] flex flex-col items-center justify-center p-8 text-center space-y-4 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1200')] bg-blend-luminosity bg-cover">
-                  <div className="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
-                  
-                  <div className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl max-w-sm border border-secondary-sand relative z-10 space-y-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/5 mx-auto flex items-center justify-center text-primary">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                    <div className="space-y-1">
-                      <h5 className="font-playfair font-bold text-lg text-text-brown">Delhi NCR Coverage</h5>
-                      <p className="text-xs text-text-brown/60 font-inter leading-relaxed">
-                        We deliver fresh products directly from our three central hubs across Delhi, Noida, and Gurugram.
-                      </p>
-                    </div>
-                    <Button className="w-full bg-primary hover:bg-primary/95 text-secondary-cream border-none font-bold text-xs" onClick={() => window.open('https://maps.google.com')}>
-                      Open Active Google Maps
-                    </Button>
-                  </div>
-                </div>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4163.4197543735245!2d77.26931608957634!3d28.65957654148488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc90e29ef957%3A0xcd559642acf3c88f!2sx%2C%20938%2C%20Satsang%20Marg%2C%20Rajgarh%20Colony%2C%20Seelampur%2C%20Shahdara%2C%20Delhi%2C%20110031!5e0!3m2!1sen!2sin!4v1781983897005!5m2!1sen!2sin" 
+                  className="w-full h-full border-0 absolute inset-0"
+                  allowFullScreen
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
 
             </div>
@@ -551,7 +499,7 @@ export const Contact = () => {
                   Shop Now
                 </Button>
               </Link>
-              <a href="tel:+919876543210" className="w-full sm:w-auto">
+              <a href="tel:+918800308268" className="w-full sm:w-auto">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 border-primary-gold text-primary-gold hover:bg-primary-gold/10 bg-transparent font-bold">
                   Contact Support
                 </Button>

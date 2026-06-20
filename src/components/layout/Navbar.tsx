@@ -57,8 +57,8 @@ export const Navbar = () => {
 
       {/* Main Header */}
       <header className="w-full bg-secondary-cream/90 backdrop-blur-md border-b border-secondary-sand/30 shadow-sm relative z-40">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="flex h-20 items-center justify-between">
+        <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 xl:px-16">
+          <div className="flex h-24 items-center justify-between">
             
             {/* Mobile Burger Menu Button */}
             <div className="flex items-center gap-4 lg:hidden">
@@ -71,20 +71,20 @@ export const Navbar = () => {
             </div>
 
             {/* Logo */}
-            <div className="flex-1 flex justify-center lg:justify-start">
+            <div className="shrink-0 flex justify-center lg:justify-start mr-8 xl:mr-12">
               <Link to="/" className="flex items-center">
                 <img src={logo} alt="SSN Sudarshan Sweets" className="h-20 md:h-24 w-auto object-contain rounded-md mix-blend-multiply" />
               </Link>
             </div>
 
             {/* Desktop Navigation Menu */}
-            <nav className="hidden lg:flex flex-1 justify-center space-x-6">
+            <nav className="hidden lg:flex flex-1 justify-start space-x-8 xl:space-x-12">
               <div 
                 className="relative py-7"
                 onMouseEnter={() => setActiveMegaMenu('sweets')}
                 onMouseLeave={() => setActiveMegaMenu(null)}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-text-brown hover:text-primary transition-colors cursor-pointer">
+                <button className="flex items-center gap-1 text-[15px] font-medium text-text-brown hover:text-primary transition-colors cursor-pointer tracking-wide">
                   Premium Sweets <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
@@ -94,7 +94,7 @@ export const Navbar = () => {
                 onMouseEnter={() => setActiveMegaMenu('namkeen')}
                 onMouseLeave={() => setActiveMegaMenu(null)}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-text-brown hover:text-primary transition-colors cursor-pointer">
+                <button className="flex items-center gap-1 text-[15px] font-medium text-text-brown hover:text-primary transition-colors cursor-pointer tracking-wide">
                   Savory Namkeen <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
@@ -104,21 +104,21 @@ export const Navbar = () => {
                 onMouseEnter={() => setActiveMegaMenu('gifting')}
                 onMouseLeave={() => setActiveMegaMenu(null)}
               >
-                <button className="flex items-center gap-1 text-sm font-medium text-accent-saffron hover:text-primary transition-colors cursor-pointer">
+                <button className="flex items-center gap-1 text-[15px] font-medium text-accent-saffron hover:text-primary transition-colors cursor-pointer tracking-wide">
                   Festive Gifting <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
 
-              <Link to="/about" className="text-sm font-medium text-text-brown hover:text-primary transition-colors py-7">
+              <Link to="/about" className="text-[15px] font-medium text-text-brown hover:text-primary transition-colors py-7 tracking-wide">
                 About Us
               </Link>
-              <Link to="/contact" className="text-sm font-medium text-text-brown hover:text-primary transition-colors py-7">
+              <Link to="/contact" className="text-[15px] font-medium text-text-brown hover:text-primary transition-colors py-7 tracking-wide">
                 Contact Us
               </Link>
             </nav>
 
             {/* Right Side Shopping & Profile actions */}
-            <div className="flex items-center gap-1 md:gap-3 flex-1 justify-end">
+            <div className="shrink-0 flex items-center gap-2 md:gap-5 justify-end pl-8">
               <div className="hidden lg:flex items-center bg-white rounded-full px-3 py-1.5 border border-secondary-sand/50 shadow-sm focus-within:ring-1 focus-within:ring-primary focus-within:border-primary transition-all">
                 <Search className="h-4 w-4 text-text-brown/50" />
                 <input 
@@ -140,7 +140,7 @@ export const Navbar = () => {
                 </Button>
               </Link>
 
-              <Button 
+              {/* <Button 
                 onClick={() => setIsCartDrawerOpen(true)}
                 variant="primary" 
                 size="icon" 
@@ -150,7 +150,7 @@ export const Navbar = () => {
                 <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent-saffron text-[9px] font-bold text-white shadow-sm animate-pulse">
                   {totalCartItemsCount}
                 </span>
-              </Button>
+              </Button> */}
             </div>
             
           </div>
@@ -345,7 +345,7 @@ export const Navbar = () => {
           <Gift className="w-5 h-5 text-current" />
           <span className="text-[9px] font-semibold mt-0.5">Gifting</span>
         </Link>
-        <button 
+        {/* <button 
           onClick={() => setIsCartDrawerOpen(true)}
           className="flex flex-col items-center justify-center text-text-brown hover:text-primary transition-colors relative cursor-pointer bg-transparent border-none outline-none"
         >
@@ -354,7 +354,7 @@ export const Navbar = () => {
             {totalCartItemsCount}
           </span>
           <span className="text-[9px] font-semibold mt-0.5">Cart</span>
-        </button>
+        </button> */}
       </div>
 
       {/* Mini Cart Drawer */}

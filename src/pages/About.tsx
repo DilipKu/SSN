@@ -519,94 +519,9 @@ export const About = () => {
         </section>
 
         {/* Section 8: Testimonials */}
-        <section className="py-24 container mx-auto px-4 md:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1.5 mb-3">
-              <Star className="w-4 h-4 text-primary-gold fill-primary-gold" />{" "}
-              Kirdaar Testimonials
-            </span>
-            <Heading
-              level={2}
-              className="text-3xl md:text-5xl font-bold text-text-brown luxury-border-gold pb-4"
-            >
-              Celebrating Sweet Relationships
-            </Heading>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              {...fadeInUp}
-              className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-secondary-sand/40 shadow-sm space-y-6 text-left"
-            >
-              <div className="flex gap-1 text-primary-gold">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="italic text-sm text-text-brown/80 font-inter leading-relaxed">
-                "The Kaju Katli from Sudarshan Sweets is pure nostalgia. It
-                melts effortlessly, and the richness of pure ghee is so evident.
-                Our family has been buying since 2005!"
-              </p>
-              <div>
-                <p className="font-playfair font-bold text-text-brown">
-                  Devendra Sharma
-                </p>
-                <p className="text-[10px] text-primary-gold uppercase tracking-wider font-semibold font-inter mt-0.5">
-                  Delhi Legacy Client
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              {...fadeInUp}
-              className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-secondary-sand/40 shadow-sm space-y-6 text-left"
-            >
-              <div className="flex gap-1 text-primary-gold">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="italic text-sm text-text-brown/80 font-inter leading-relaxed">
-                "For our daughter's wedding, we ordered customized velvet boxes.
-                Our guests were absolutely charmed by both the packaging design
-                and the divine Motichoor Ladoos."
-              </p>
-              <div>
-                <p className="font-playfair font-bold text-text-brown">
-                  Kiran Kapoor
-                </p>
-                <p className="text-[10px] text-primary-gold uppercase tracking-wider font-semibold font-inter mt-0.5">
-                  Gurugram Bride's Mother
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              {...fadeInUp}
-              className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-secondary-sand/40 shadow-sm space-y-6 text-left"
-            >
-              <div className="flex gap-1 text-primary-gold">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="italic text-sm text-text-brown/80 font-inter leading-relaxed">
-                "Finding organic, low-sugar authentic sweets is difficult. Their
-                sugar-free range made with organic dates and saffron is
-                exceptional. Highly recommend for pure gifting."
-              </p>
-              <div>
-                <p className="font-playfair font-bold text-text-brown">
-                  Rohan Malhotra
-                </p>
-                <p className="text-[10px] text-primary-gold uppercase tracking-wider font-semibold font-inter mt-0.5">
-                  Corporate Gifting Partner
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* <section className="py-24 container mx-auto px-4 md:px-8">
+           ... testimonials content ...
+        </section> */}
 
         {/* Section 9: CTA Section */}
         <section className="relative py-28 overflow-hidden border-t border-secondary-sand/30">

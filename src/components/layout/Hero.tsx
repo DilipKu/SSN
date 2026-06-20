@@ -1,14 +1,29 @@
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion";
 import { Sparkles, Award, Gift, ShieldCheck } from "lucide-react";
+import launchBanner from "../../assets/launch_banner.jpeg";
 
 export const Hero = () => {
+  const showOriginalHero = false;
+
   const stats = [
     { value: "30+ Years", label: "Royal Heritage" },
     { value: "100% Pure", label: "Desi Ghee & Ingredients" },
     { value: "50K+", label: "Happy Celebrations" },
     { value: "Handcrafted", label: "Traditional Recipes" },
   ];
+
+  if (!showOriginalHero) {
+    return (
+      <section className="relative w-full bg-[#1E0C05]">
+        <img 
+          src={launchBanner} 
+          alt="SSN Grand Opening Banner" 
+          className="w-full h-auto object-cover"
+        />
+      </section>
+    );
+  }
 
   return (
     <section className="relative w-full overflow-hidden bg-secondary-cream py-10 lg:py-20 border-b border-secondary-sand/30">

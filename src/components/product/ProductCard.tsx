@@ -174,13 +174,13 @@ export const ProductCard = ({ product, onQuickView, onAddToCart }: ProductCardPr
               )}
             </div>
 
-            <button 
+            {/* <button 
               onClick={handleQuickAdd}
               className="h-10 px-4 bg-primary text-secondary-cream hover:bg-primary-gold hover:text-primary transition-all duration-300 rounded-xl shadow-md flex items-center gap-2 text-xs font-bold font-inter tracking-wider uppercase border border-primary/20 hover:border-primary-gold/20"
             >
               <ShoppingBag className="w-3.5 h-3.5" />
               <span>Add</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </Card>
