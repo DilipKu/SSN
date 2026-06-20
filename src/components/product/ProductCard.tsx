@@ -24,7 +24,7 @@ interface ProductCardProps {
   onAddToCart?: (product: Product) => void;
 }
 
-export const ProductCard = ({ product, onQuickView, onAddToCart }: ProductCardProps) => {
+export const ProductCard = ({ product, onQuickView, /* onAddToCart */ }: ProductCardProps) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
