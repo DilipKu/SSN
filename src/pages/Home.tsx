@@ -9,9 +9,9 @@ import { FestivalCampaigns } from "../components/home/FestivalCampaigns";
 import { HeritageStory } from "../components/home/HeritageStory";
 import { WhyChooseUs } from "../components/home/WhyChooseUs";
 import { CorporateGifting } from "../components/home/CorporateGifting";
-import { Testimonials } from "../components/home/Testimonials";
-import { SocialGallery } from "../components/home/SocialGallery";
-import { AppDownload } from "../components/home/AppDownload";
+// import { Testimonials } from "../components/home/Testimonials";
+// import { SocialGallery } from "../components/home/SocialGallery";
+// import { AppDownload } from "../components/home/AppDownload";
 
 export const Home = () => {
   return (

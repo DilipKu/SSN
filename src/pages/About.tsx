@@ -10,7 +10,7 @@ import {
   Sparkles,
   Gift,
   Heart,
-  Star,
+  /* Star, */
   BookOpen,
   Clock,
   CheckCircle2,

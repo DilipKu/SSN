@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, ShoppingBag, Star, Eye, Sparkles } from 'lucide-react';
+import { Heart, /* ShoppingBag, */ Star, Eye, Sparkles } from 'lucide-react';
 import { Card } from '../ui/Card';
 import { Text } from '../ui/Typography';
 
@@ -34,6 +34,7 @@ export const ProductCard = ({ product, onQuickView, onAddToCart }: ProductCardPr
     setIsWishlisted(!isWishlisted);
   };
 
+  {/* 
   const handleQuickAdd = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -42,7 +43,8 @@ export const ProductCard = ({ product, onQuickView, onAddToCart }: ProductCardPr
     } else {
       alert(`Added ${product.name} to cart!`);
     }
-  };
+  }; 
+  */}
 
   const handleQuickViewClick = (e: React.MouseEvent) => {
     e.preventDefault();

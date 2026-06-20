@@ -6,7 +6,7 @@ import { Heading, Text } from '../components/ui/Typography';
 import { Button } from '../components/ui/Button';
 import { ProductCard } from '../components/product/ProductCard';
 import { 
-  Heart, ShoppingBag, Star, ShieldCheck, Truck, ChevronRight, 
+  Heart, /* ShoppingBag, */ Star, ShieldCheck, Truck, ChevronRight, 
   Flame, Award, Gift, Sparkles, Video, RotateCw, Plus, CheckCircle2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
